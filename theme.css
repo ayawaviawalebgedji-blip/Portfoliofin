@@ -1,0 +1,299 @@
+/* ============================================
+   THÈME DARK / LIGHT MODE
+   ============================================ */
+
+/* Variables CSS pour le Light Mode uniquement */
+/* On ne touche PAS au dark mode qui reste le style par défaut */
+
+[data-theme="light"] {
+    /* Backgrounds */
+    --bg-primary: linear-gradient(135deg, #f5f7fa, #e8eef5, #dce4f0);
+    --bg-secondary: rgba(255, 255, 255, 0.8);
+    --bg-card: rgba(255, 255, 255, 0.9);
+    
+    /* Textes */
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-tertiary: #5a67d8;
+    
+    /* Bordures */
+    --border-color: rgba(0, 0, 0, 0.1);
+    --border-hover: rgba(102, 126, 234, 0.5);
+}
+
+/* Application du Light Mode */
+[data-theme="light"] body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Bouton de switch de thème */
+.theme-switcher {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-switcher:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+.theme-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.theme-icon.active {
+    transform: scale(1.2);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.theme-icon.inactive {
+    opacity: 0.3;
+    transform: scale(0.9);
+}
+
+/* Light Mode - Ajustements spécifiques */
+[data-theme="light"] .theme-switcher {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Light Mode - Cartes et backgrounds */
+[data-theme="light"] .card,
+[data-theme="light"] .contact-card,
+[data-theme="light"] .achievement-card,
+[data-theme="light"] .skill-category,
+[data-theme="light"] .project-card,
+[data-theme="light"] .timeline-content,
+[data-theme="light"] .cv-card,
+[data-theme="light"] .form-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Light Mode - Textes */
+[data-theme="light"] .glow-title,
+[data-theme="light"] .hero-title,
+[data-theme="light"] h1, 
+[data-theme="light"] h2, 
+[data-theme="light"] h3 {
+    color: #2d3748;
+    text-shadow: none;
+}
+
+[data-theme="light"] .section-subtitle,
+[data-theme="light"] .page-subtitle,
+[data-theme="light"] .description,
+[data-theme="light"] .hero-text,
+[data-theme="light"] .timeline-description,
+[data-theme="light"] .card-description,
+[data-theme="light"] .project-description {
+    color: #4a5568;
+}
+
+[data-theme="light"] .category-title,
+[data-theme="light"] .timeline-institution,
+[data-theme="light"] .access-text {
+    color: #5a67d8;
+}
+
+/* Light Mode - Navigation */
+[data-theme="light"] .nav a {
+    color: #2d3748;
+}
+
+[data-theme="light"] .nav a:hover,
+[data-theme="light"] .nav a.active {
+    color: #667eea;
+}
+
+/* Light Mode - Logo */
+[data-theme="light"] .logo-text {
+    color: #2d3748;
+}
+
+/* Light Mode - Inputs */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] .password-input {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #2d3748;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+    color: #a0aec0;
+}
+
+/* Light Mode - Badges */
+[data-theme="light"] .skill-badge,
+[data-theme="light"] .badge,
+[data-theme="light"] .tag {
+    background: rgba(102, 126, 234, 0.15);
+    color: #5a67d8;
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Light Mode - Footer */
+[data-theme="light"] .footer {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="light"] .copyright {
+    color: #4a5568;
+}
+
+/* Light Mode - Timeline */
+[data-theme="light"] .timeline-year {
+    background: rgba(102, 126, 234, 0.2);
+    color: #5a67d8;
+}
+
+/* Light Mode - Welcome badge */
+[data-theme="light"] .welcome-badge {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #2d3748;
+}
+
+/* Light Mode - Scroll indicator */
+[data-theme="light"] .scroll-indicator {
+    color: #667eea;
+}
+
+/* Light Mode - Ombres et glows réduits */
+[data-theme="light"] .image-wrapper,
+[data-theme="light"] .profile-wrapper {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Light Mode - Particules moins visibles */
+[data-theme="light"] .floating-particle {
+    opacity: 0.3;
+}
+
+/* Light Mode - Modal */
+[data-theme="light"] .modal {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="light"] .modal-close {
+    color: #2d3748;
+}
+
+/* Light Mode - Stats */
+[data-theme="light"] .stat-item {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .stat-label {
+    color: #4a5568;
+}
+
+/* Light Mode - Availability card */
+[data-theme="light"] .availability-card {
+    background: rgba(102, 126, 234, 0.1);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Light Mode - Image overlay */
+[data-theme="light"] .image-overlay {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+[data-theme="light"] .overlay-text {
+    color: #5a67d8;
+}
+
+/* Light Mode - CV section */
+[data-theme="light"] .cv-access {
+    background: rgba(248, 250, 252, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Light Mode - File preview */
+[data-theme="light"] .cv-preview {
+    background: rgba(248, 250, 252, 0.8);
+}
+
+/* Light Mode - View button */
+[data-theme="light"] .view-btn {
+    background: rgba(102, 126, 234, 0.15);
+    color: #5a67d8;
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Light Mode - Contact links */
+[data-theme="light"] .contact-link {
+    color: #5a67d8;
+}
+
+/* Light Mode - Btn outline */
+[data-theme="light"] .btn-outline {
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #2d3748;
+}
+
+[data-theme="light"] .btn-outline:hover {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .theme-switcher {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        padding: 8px;
+    }
+    
+    .theme-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Animation du switch */
+@keyframes theme-switch {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.theme-switcher.switching .theme-icon {
+    animation: theme-switch 0.5s ease;
+}
+
+/* Transitions douces UNIQUEMENT pour le thème */
+[data-theme="light"] * {
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
